@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Bootstrap</title>
+
+    <style>
+        :root {}
+
+
+        .item {
+            background-color: bisque;
+            border: 1px solid black;
+            text-align: center;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        --STANDARD COLORS--
+            [primary/secondary/success/danger/warning/info/light/dark/muted/white]
+
+        --STANDARD BREAKPOINTS--
+            [sm]>576px [md]>768px [ld]>992px [xl]>1200px
+
+        --POSITION
+            .fixed-top
+            .fixed-bottom
+            .sticky-top (not supported by all browsers)
+        
+        --BASIC DISPLAY--
+            .d(-BP)-TYP
+                BP: [STANDARD BREAKPOINTS]
+                YP: [none][inline][inline-blick][block][table][table-row][table-cell][flex][inline-flex]
+
+        --FLEXBOX CONTAINER OPTIONS--
+            .flex(-BP)(-DIR)(-reverse)
+                BP: [STANDARD BREAKPOINTS]
+                DIR: [row][column]
+            
+            .order(-BP)(-ORD)
+                BP: [STANDARD BREAKPOINTS]
+                ORD: [1-12]
+            
+            .justify-content(-BP)-ALG
+                BP: [STANDARD BREAKPOINTS]
+                ALG: [start][end][center][around][between]
+
+            .flex(-BP)(-WRP)-reverse
+                flexbox wrapping
+                BP: [STANDARD BREAKPOINTS]
+                WRP: [wrap][nowrap]
+
+            .align-content(-BP)-ALG
+                BP: [STANDARD BREAKPOINTS]
+                ALG: [start][end][center][around][between][stretch]
+
+        --MARGIN/PADDING--
+            .PRO(SID)(-BP)-SIZ
+                -PRO: [m] adjusts margin [p] adjusts padding
+                -SID: [t][r][b][l][x][y] controls the side to attach to 
+                -BP: [STANDARD BREAKPOINTS]
+                -SIZ: [0][1][2][3][4][5][auto] controls size
+       
+        --VISIBILITY--
+            .invisible - element won't show, but will take up the same amount of space.
+            .visible - Will show to screen-reader devices.
+
+        --SIZING--
+             .SIZ(-AMT)
+                SIZ: [w][h][mw][mh] 
+                AMT:[25][50][75][100] % values of the container
+
+        --SIZING UTILITIES--
+            .border(-SID)(-COLOR)(-0)
+                SID:[top][right][bottom][left]
+                COLOR:[standard bootstrap colors]
+                -0: clears border effects.
+                rounded: rounds the border.
+                rounded-circle: turns border into circle.
+        
+        --NAVS AND NAVBARS--
+            --NAV--
+            .nav
+                .nav-item
+                    .nav-link
+                        .active
+                        .disabled
+            
+            .nav-pills
+            .nav-justified
+            .nav-flex
+        
+        --DROPDOWN--
+            .dropdown to align
+            .dropdown-toggle on link
+            .data-toggle="dropdown"
+            .dropdown-menu
+                .dropdown-item
+                    add #id and aria attributes for accessibility
+
+        --FORMS--
+            .form-inline
+            .form-control
+            *spacing as needed
+        
+        --NAV POSITIONING--
+            .fixed-top
+            .fixed-bottom
+            .sticky-top
+
+        --COLLAPSABLE CONTENT--
+            .collapse
+            .navbar-collapse
+            *Need to tie to the collapsable content
+            .navbar-toggler
+
+        --BUTTONS--
+            .btn basic class
+            .btn-SIZ
+                SIZ: [sm][lg][default][block]
+            .btn-COLOR
+                COLOR: [STANDARD COLORS]
+            .btn-block --fill width of container
+            .active
+            .disabled
+
+
+
+
+    
+    -->
+
+
+    <div class="container">
+
+        <section class="content" id="services">
+            <div class="bg-secondary p-3">
+                <h2 style="color: var(--yellow);">Exotic Pets</h2>
+                <p class="text-light">We offer <strong>specialized</strong> care for <em>reptiles, rodents, birds,</em>
+                    and other exotic
+                    pets.</p>
+            </div>
+
+            <!-- <ul class="container list-unstyled bg-info cleafix">
+                <li class="item bg-warning float-left pb-3">Grooming</li>
+                <li class="item bg-warning float-left pt-3">General Health</li>
+                <li class="item bg-warning float-left pb-3">Nutrition</li>
+                <li class="item bg-warning float-left pt-3">Pest Control</li>
+                <li class="item bg-warning float-left pb-3">Vaccinations</li>
+            </ul> -->
+
+            <!-- <ul class="nav nav-pills nav-justified">
+                <li class="nav-item"><a class="nav-link" href="#">Grooming</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">General Health</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Nutrition</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pest Control</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#">Vaccinations</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Testimonials</a></li>
+            </ul> -->
+
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav"
+                    aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="myTogglerNav">
+                    <div class="navbar-nav ml-sm-auto">
+                        <a class="nav-item nav-link" href="#">Grooming</a>
+                        <a class="nav-item nav-link" href="#">General Health</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown"
+                                aria-haspopup="true" aria-expanded="false" href="#">Nutrition</a>
+
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="#">Dogs</a>
+                                <a class="dropdown-item" href="#">Cats</a>
+                                <a class="dropdown-item" href="#">Birds</a>
+                                <a class="dropdown-item" href="#">Reptiles</a>
+                            </div>
+
+                        </div>
+                        <a class="nav-item nav-link" href="#">Pest Control</a>
+                        <a class="nav-item nav-link disabled" href="#">Vaccinations</a>
+                        <a class="nav-item nav-link active" href="#">Testimonials</a>
+                    </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-light" type="submit">Go</button>
+
+                    </form>
+                </div>
+            </nav>
+
+        </section>
+        <section class="container text-center" id="testimonials">
+
+            <h2>Testimonials</h2>
+
+            <div class="row" style="background: lightgray;">
+
+                <article class="col-sm-6 col-md-4 col-lg-3 border border-primary">
+                    <img class="img-fluid" src="https://picsum.photos/200" alt="random image">
+                    <blockquote class="blockquote">
+                        During the summer, our rabbit, Tonto, began to have severe redness and itching on
+                        his belly and
+                        feet.
+                        I'm very thankful to the veterinarians and staff at Wisdom for the excellent care
+                        Tonto
+                        received,
+                        and
+                        for nipping his allergies in the bud, so to speak.
+                        <div class="blockquote-footer">Jane</div>
+                    </blockquote>
+                </article>
+
+                <article class="col-sm-6 col-md-4 col-lg-3">
+                    <img class="mx-auto" src="https://picsum.photos/200" alt="random image">
+                    <blockquote class="blockquote">
+                        When Samantha, our Siamese cat, began sleeping all the time and urinating
+                        excessively, we
+                        brought
+                        her
+                        to see the specialists at Wisdom. Now, two years later, Samantha is still free from
+                        any
+                        complications
+                        of diabetes, and her blood sugar regularly tests normal.
+                        The McPhersons
+                        <div class="blockquote-footer">The McPhersons</div>
+                    </blockquote>
+                </article>
+
+                <article class="col-sm-6 col-md-4 col-lg-3">
+                    <img class="mx-auto" src="https://picsum.photos/200" alt="random image">
+                    <blockquote class="blockquote">
+                        The staff at Wisdom worked tirelessly to determine why our three-year old Golden
+                        Retriever,
+                        Roxie,
+                        started going into sudden kidney failure. They stabilized her and provided fluids
+                        until her
+                        kidneys
+                        were again functioning normally.
+                        John B
+                    </blockquote>
+                </article>
+
+                <article class="col-sm-6 col-md-4 col-lg-3">
+                    <img class="img-fluid" src="https://picsum.photos/200" alt="random image">
+                    <blockquote class="blockquote">
+                        Wisdom Pet Medicine is the only clinic around that will even book pet fish for
+                        appointments.
+                        When
+                        our
+                        13-year old Comet goldfish, McAllister, turned from silvery white to an angry red,
+                        we called
+                        around,
+                        urgently trying to find a veterinarian who could help. Wisdom not only got us in
+                        the same day,
+                        but
+                        also
+                        was able to diagnose McAllister as having a severe case of septicemia.
+                        Lorraine S
+                    </blockquote>
+                </article>
+
+                <article class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="row no-gutters">
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/201"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/202"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/200"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/203"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/204"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/205"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/206"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/207"></div>
+                        <div class="col-4"><img class="img-thumbnail" src="https://picsum.photos/208"></div>
+                    </div>
+                </article>
+
+            </div>
+    </div>
+    </section>
+
+    </div><!-- content container -->
+
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
